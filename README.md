@@ -89,9 +89,34 @@ your_model.fit(x_training_data, y_training_data)
 .intercept_: contains the intercept<br>
 
 Predict:<br>
+
 ``` python
 predictions = your_model.predict(your_x_data)
 ```
 .score(): returns the coefficient of determination R².
+
+#### Naive Bayes
+Import and create the model: <br>
+
+```python
+from sklearn.naive_bayes import MultinomialNB
+your_model = MultinomialNB()
+```
+Fit:<br>
+
+```python
+your_model.fit(x_training_data, y_training_data)
+```
+
+Predict:<br>
+``` python
+# Returns a list of predicted classes - one prediction for every data point
+predictions = your_model.predict(your_x_data)
+```
+```python
+# For every data point, returns a list of probabilities of each class
+probabilities = your_model.predict_proba(your_x_data)
+
+```
 
 
