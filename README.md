@@ -15,6 +15,10 @@ Unsupervised Learning is where the program learns the inherent structure of the 
 
 Clustering is a common unsupervised machine learning approach that finds patterns and structures in unlabeled data by grouping them into clusters. e.g Search engines to group similar objects in one cluster <br>
 
+#### Differences.
+Supervised Learning: data is labeled and the program learns to predict the output from the input data.<br>
+Unsupervised Learning: data is unlabeled and the program learns to recognize the inherent structure in the input data. <br>
+
 ## The Process.
 The process of performing Machine Learning often requires many more steps before and after the predictive analytics.<br>
 We try to think of the Machine Learning process as:<br>
