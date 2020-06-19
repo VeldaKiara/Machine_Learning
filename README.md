@@ -77,6 +77,7 @@ Import and create the model: <br>
 
 ```python 
 from sklearn.linear_model import LinearRegression.
+
 your_model = LinearRegression().
 ```
 
@@ -100,6 +101,7 @@ Import and create the model: <br>
 
 ```python
 from sklearn.naive_bayes import MultinomialNB
+
 your_model = MultinomialNB()
 ```
 Fit:<br>
@@ -125,6 +127,7 @@ Import and create the model:<br>
 
 ```python
 from sklearn.neigbors import KNeighborsClassifier
+
 your_model = KNeighborsClassifier()
 ```
 Fit:<br>
@@ -148,6 +151,7 @@ Import and create the model:<br>
 
 ```python
 from sklearn.cluster import KMeans
+
 your_model = KMeans(n_clusters=4, init='random')
 ```
 n_clusters: number of clusters to form and number of centroids to generate<br>
@@ -171,4 +175,25 @@ Predict:<br>
 ```python
 predictions = your_model.predict(your_x_data)
 ```
+#### Validating the Model
+Import and print accuracy, recall, precision, and F1 score:<br>
 
+```python
+from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
+
+print(accuracy_score(true_labels, guesses))
+
+print(recall_score(true_labels, guesses))
+
+print(precision_score(true_labels, guesses))
+
+print(f1_score(true_labels, guesses))
+``` 
+
+Import and print the confusion matrix:<br>
+
+```python
+from sklearn.metrics import confusion_matrix
+
+print(confusion_matrix(true_labels, guesses))
+```
