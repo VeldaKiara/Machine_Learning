@@ -143,4 +143,32 @@ predictions = your_model.predict(your_x_data)
 probabilities = your_model.predict_proba(your_x_data)
 ```
 
+#### K-Means
+Import and create the model:<br>
+
+```python
+from sklearn.cluster import KMeans
+your_model = KMeans(n_clusters=4, init='random')
+```
+n_clusters: number of clusters to form and number of centroids to generate<br>
+
+init: method for initialization<br>
+
+k-means++: K-Means++ [default] <br>
+
+random: K-Means<br>
+
+random_state: the seed used by the random number generator [optional]<br>
+
+Fit:<br>
+
+```python
+your_model.fit(x_training_data)
+```
+
+Predict:<br>
+
+```python
+predictions = your_model.predict(your_x_data)
+```
 
