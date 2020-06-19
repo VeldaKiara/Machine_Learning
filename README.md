@@ -208,3 +208,10 @@ train_size: the proportion of the dataset to include in the train split<br>
 test_size: the proportion of the dataset to include in the test split <br>
 
 random_state: the seed used by the random number generator [optional] <br>
+
+### Linear Regression
+Representing Points, distance.<br>
+Three different ways to define the distance between two points:<br>
+   -Euclidean Distance<br>
+   -Manhattan Distance<br>
+   -Hamming Distance<br>
