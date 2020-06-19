@@ -60,3 +60,15 @@ For our example, we can now start inputting new orders. The input could be an or
    -the time of day.<br>
    -the number of employees working.<br>
 The output would be how long the order is expected to take. This information could be displayed to users.
+
+## Scikit-Learn.
+Scikit-learn is a library in Python that provides many unsupervised and supervised learning algorithms. It’s built upon some of the technologies like NumPy, pandas, and Matplotlib! <br>
+
+The functionality that scikit-learn provides include:
+    -Regression, including Linear and Logistic Regression.<br>
+    -Classification, including K-Nearest Neighbors.<br>
+    -Clustering, including K-Means and K-Means++ .<br>
+    -Model selection.<br>
+    -Preprocessing, including Min-Max Normalization.<br>
+
+
