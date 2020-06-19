@@ -212,6 +212,10 @@ random_state: the seed used by the random number generator [optional] <br>
 ### Linear Regression
 Representing Points, distance.<br>
 Three different ways to define the distance between two points:<br>
-   -Euclidean Distance<br>
+-Euclidean Distance<br>
+Euclidean Distance is the most commonly used distance formula. 
+To find the Euclidean distance between two points, we first calculate the squared distance between each dimension. 
+If we add up all of these squared differences and take the square root, we’ve computed the Euclidean distance.
+   
    -Manhattan Distance<br>
    -Hamming Distance<br>
