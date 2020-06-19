@@ -70,5 +70,28 @@ The functionality that scikit-learn provides include:
     -Clustering, including K-Means and K-Means++ .<br>
     -Model selection.<br>
     -Preprocessing, including Min-Max Normalization.<br>
+    
+### Scikit-Learn Cheatsheet.
+#### Linear Regression.<br>
+Import and create the model: <br>
+
+```python 
+from sklearn.linear_model import LinearRegression.
+your_model = LinearRegression().
+```
+
+fit: <br>
+
+```python
+your_model.fit(x_training_data, y_training_data)
+```
+.coef_: contains the coefficients<br>
+.intercept_: contains the intercept<br>
+
+Predict:<br>
+``` python
+predictions = your_model.predict(your_x_data)
+```
+.score(): returns the coefficient of determination R².
 
 
