@@ -6,3 +6,7 @@ def euclidean_distance(pt1, pt2):
 
 print(euclidean_distance([1, 2], [4, 0]))
 print(euclidean_distance([5, 4, 3], [1, 7, 9]))
+
+def manhattan_distance(pt1, pt2):
+    distance = 0
+    return distance
