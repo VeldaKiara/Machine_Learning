@@ -1,3 +1,5 @@
+from scipy.spatial import distance
+
 def euclidean_distance(pt1, pt2):
     distance = 0
     for i in range(len(pt1)):
@@ -23,3 +25,7 @@ def hamming_distance(pt1,pt2):
     return distance
 print(hamming_distance([1, 2], [1, 100]))
 print(hamming_distance([5, 4, 9], [1, 7, 9]))
+
+print(distance.euclidean([1, 2], [4, 0]))
+print(distance.cityblock([1, 2], [4, 0]))
+print(distance.hamming([5, 4, 9], [1, 7, 9]))
