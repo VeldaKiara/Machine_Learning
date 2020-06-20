@@ -216,6 +216,10 @@ Three different ways to define the distance between two points:<br>
 Euclidean Distance is the most commonly used distance formula. 
 To find the Euclidean distance between two points, we first calculate the squared distance between each dimension. 
 If we add up all of these squared differences and take the square root, we’ve computed the Euclidean distance.
-   
-   -Manhattan Distance<br>
+ 
+-Manhattan Distance<br>
+Manhattan Distance is extremely similar to Euclidean distance. 
+Rather than summing the squared difference between each dimension, 
+we instead sum the absolute value of the difference between each dimension
+
    -Hamming Distance<br>
