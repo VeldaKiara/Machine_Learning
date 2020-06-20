@@ -11,6 +11,21 @@ This can be broken into: <br>
 -Regression: problems here include prediction of a continous valued output e.g housing prices in Nairobi. <br>
 -Classification: problems here deal with prediction of discrete number of values e.g is a particlar email spam or not <br>
 
+#### Regression Vs Classification
+Regression is used to predict outputs that are continuous. 
+The outputs are quantities that can be flexibly determined based on the inputs of the model rather than being confined to a set of possible labels.<br>
+For example: Predict the height of a potted plant from the amount of rainfall<br>
+
+Classification
+Classification is used to predict a discrete label.
+The outputs fall under a finite set of possible outcomes. 
+Many situations have only two possible outcomes. This is called binary classification(True/False).<br>
+For example: Predict whether it will rain or not<br>
+
+Multi-label classification is when there are multiple possible outcomes. 
+It is useful for customer segmentation, image categorization, and sentiment analysis for understanding text. 
+To perform these classifications, we use models like Naive Bayes, K-Nearest Neighbors, and SVMs.
+
 Unsupervised Learning is where the program learns the inherent structure of the data based on unlabeled examples.<br>
 
 Clustering is a common unsupervised machine learning approach that finds patterns and structures in unlabeled data by grouping them into clusters. e.g Search engines to group similar objects in one cluster <br>
