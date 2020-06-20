@@ -14,3 +14,7 @@ def manhattan_distance(pt1, pt2):
     return distance
 print(manhattan_distance([1, 2], [4, 0]))
 print(manhattan_distance([5, 4, 3], [1, 7, 9]))
+
+def hamming_distance(pt1,pt2):
+    distance = 0
+    return distance
