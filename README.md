@@ -222,4 +222,8 @@ Manhattan Distance is extremely similar to Euclidean distance.
 Rather than summing the squared difference between each dimension, 
 we instead sum the absolute value of the difference between each dimension
 
-   -Hamming Distance<br>
+-Hamming Distance<br>
+Instead of finding the difference of each dimension, 
+Hamming distance only cares about whether the dimensions are exactly equal. 
+When finding the Hamming distance between two points, add one for every dimension that has different values.
+Hamming distance is used in spell checking algorithms.
