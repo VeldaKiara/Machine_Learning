@@ -226,4 +226,13 @@ we instead sum the absolute value of the difference between each dimension
 Instead of finding the difference of each dimension, 
 Hamming distance only cares about whether the dimensions are exactly equal. 
 When finding the Hamming distance between two points, add one for every dimension that has different values.
-Hamming distance is used in spell checking algorithms.
+Hamming distance is used in spell checking algorithms.<br>
+
+SciPy Distances.<br>
+Implementation of the above distances using scipy python library.<br>
+-Euclidean Distance .euclidean()<br>
+-Manhattan Distance .cityblock()<br>
+-Hamming Distance .hamming()<br>
+scipy implementation of Hamming distance will always return a number between 0 an 1.
+
+
