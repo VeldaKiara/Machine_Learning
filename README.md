@@ -271,6 +271,8 @@ When the elements of a NumPy array are mixed types, then the array's type will b
 If an array is mixed with int, float, and string elements, everything is cast to strings.<br>
 Example of np.array upcasting. Both integers are cast to their floating-point equivalents.<br>
 ```python
+import numpy as np
+
 arr = np.array([0, 0.1, 2])
 print(repr(arr))
 
