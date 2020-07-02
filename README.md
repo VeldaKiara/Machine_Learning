@@ -299,7 +299,7 @@ print('Array b: {}'.format(repr(b)))
 #output Array a: array([0, 1]),Array a: array([5, 1]),Array b: array([9, 8])
 ```
 
-c. Casting
+c. Casting<br>
 We cast NumPy arrays through their inherent astype function. The function's required argument is the new type for the array.
 It returns the array cast to the new type.<br>
 The  example below is on casting using the astype function. The dtype property returns the type of an array.<br>
@@ -311,6 +311,19 @@ print(arr.dtype)
 
 #output int64 float32
 ```
+d. NaN<br>
+When we don't want a NumPy array to contain a value at a particular index, we can use np.nan to act as a placeholder.
+A common usage for np.nan is as a filler value for incomplete data.<br>
+Example usage of np.nan. Note that np.nan cannot take on an integer type.<br>
+```python
+arr = np.array([np.nan, 1, 2])
+print(repr(arr))
 
+arr = np.array([np.nan, 'abc'])
+print(repr(arr))
+
+# Will result in a ValueError
+np.array([np.nan, 1, 2], dtype=np.int32)
+```
 
 
