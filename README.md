@@ -250,6 +250,32 @@ Implementation of the above distances using scipy python library.<br>
 -Hamming Distance .hamming()<br>
 scipy implementation of Hamming distance will always return a number between 0 an 1.
 
-### Data Manipulation with Numpy
+## Data Manipulation with Numpy
+a.Numpy Arrays <br>
+NumPy arrays are basically just Python lists with added features. You can easily convert a Python list to a Numpy array using the np.array function which takes in a Python list as its required argument. The function has quite a few keyword arguments, but the main one to know is dtype. 
+The dtype keyword argument takes in a NumPy type and manually casts the array to the specified type.<br>
+Example:<br>
+The code below is an example usage of np.array to create a 2-D matrix. Note that the array is manually cast to np.float32.<br>
+
+```python 
+import numpy as np
+
+arr = np.array([[0, 1, 2], [3, 4, 5]],
+               dtype=np.float32)
+print(repr(arr))
+
+#output array([[0., 1., 2.], [3., 4., 5.]], dtype=float32)
+```
+
+When the elements of a NumPy array are mixed types, then the array's type will be upcast to the highest level type. Meaning that if an array input has mixed int and float elements, all the integers will be cast to their floating-point equivalents. 
+If an array is mixed with int, float, and string elements, everything is cast to strings.<br>
+Example of np.array upcasting. Both integers are cast to their floating-point equivalents.<br>
+```python
+arr = np.array([0, 0.1, 2])
+print(repr(arr))
+
+#output array([0. , 0.1, 2. ])
+```
+
 
 
