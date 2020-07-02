@@ -252,7 +252,7 @@ scipy implementation of Hamming distance will always return a number between 0 a
 
 ## Data Manipulation with Numpy
 ### Numpy Arrays
-a.Numpy Arrays <br>
+a. Numpy Arrays <br>
 NumPy arrays are basically just Python lists with added features. You can easily convert a Python list to a Numpy array using the np.array function which takes in a Python list as its required argument. The function has quite a few keyword arguments, but the main one to know is dtype. 
 The dtype keyword argument takes in a NumPy type and manually casts the array to the specified type.<br>
 Example:<br>
@@ -280,7 +280,7 @@ print(repr(arr))
 #output array([0. , 0.1, 2. ])
 ```
 
-b.Copying<br>
+b. Copying<br>
 Similar to Python lists, when we make a reference to a NumPy array it doesn't create a different array. Therefore, if we change a value using the reference variable, it changes the original array as well. We get around this by using an array's inherent copy function. The function has no required arguments, and it returns the copied array.<br>
 Example below, c is a reference to a while d is a copy. Therefore, changing c leads to the same change in a, while changing d does not change the value of b.<br>
 ```python
@@ -297,6 +297,19 @@ d[0] = 6
 print('Array b: {}'.format(repr(b)))
 
 #output Array a: array([0, 1]),Array a: array([5, 1]),Array b: array([9, 8])
+```
+
+c. Casting
+We cast NumPy arrays through their inherent astype function. The function's required argument is the new type for the array.
+It returns the array cast to the new type.<br>
+The  example below is on casting using the astype function. The dtype property returns the type of an array.<br>
+```python
+arr = np.array([0, 1, 2])
+print(arr.dtype)
+arr = arr.astype(np.float32)
+print(arr.dtype)
+
+#output int64 float32
 ```
 
 
