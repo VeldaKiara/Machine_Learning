@@ -250,4 +250,6 @@ Implementation of the above distances using scipy python library.<br>
 -Hamming Distance .hamming()<br>
 scipy implementation of Hamming distance will always return a number between 0 an 1.
 
+### Data Manipulation with Numpy
+
 
