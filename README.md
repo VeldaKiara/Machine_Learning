@@ -343,5 +343,5 @@ print(repr(arr))
 # Will result in an OverflowError
 np.array([np.inf, 3], dtype=np.int32)
 
-#other output Truearray([inf,  5.]), array([-inf,   1.])
+#other output True, array([inf,  5.]), array([-inf,   1.])
 ```
