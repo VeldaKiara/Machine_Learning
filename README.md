@@ -378,6 +378,7 @@ The output of np.arange is specified as follows:<br>
 -For two arguments, m and n, np.arange will return an array with all the integers in the range [m, n].<br>
 -For three arguments, m, n, and s, np.arange will return an array with the integers in the range [m, n] using a step size of s.<br>
 -Like np.array, np.arange performs upcasting. It also has the dtype keyword argument to manually cast the array.<br>
+
 To specify the number of elements in the returned array, rather than the step size, we can use the np.linspace function.<br>
 This function takes in a required first two arguments, for the start and end of the range, respectively.<br>
 The end of the range is inclusive for np.linspace, unless the keyword argument endpoint is set to False.<br>
@@ -398,6 +399,41 @@ print(repr(arr))
 #array([5. , 6.5, 8. , 9.5])
 #array([ 5,  7,  9, 11], dtype=int32)
 ```
+b. Reshaping data<br>
+We use np.reshape to reshape data.<br>
+It takes in an array and a new shape as required arguments. The new shape must exactly contain all the elements from the input array. E.g, we could reshape an array with 12 elements to (4, 3), but we can't reshape it to (4, 4).<br>
+We are allowed to use the special value of -1 in at most one dimension of the new shape. The dimension with -1 will take on the value necessary to allow the new shape to contain all the elements of the array.
+Example:<br>
+```python
+arr = np.arange(8)
 
+reshaped_arr = np.reshape(arr, (2, 4))
+print(repr(reshaped_arr))
+print('New shape: {}'.format(reshaped_arr.shape))
+
+reshaped_arr = np.reshape(arr, (-1, 2, 2))
+print(repr(reshaped_arr))
+print('New shape: {}'.format(reshaped_arr.shape))
+#output array([[0, 1, 2, 3], [4, 5, 6, 7]]) New shape: (2, 4) array([[[0, 1], [2, 3]], [[4, 5], [6, 7]]]) New shape: (2, 2, 2)
+```
+While the np.reshape function can perform any reshaping utilities we need, NumPy provides an inherent function for flattening an array.<br>
+Flattening an array reshapes it into a 1D array. Since we need to flatten data quite often, it is a useful function.<br>
+Example:<br>
+```python
+arr = np.arange(8)
+arr = np.reshape(arr, (2, 4))
+flattened = arr.flatten()
+print(repr(arr))
+print('arr shape: {}'.format(arr.shape))
+print(repr(flattened))
+print('flattened shape: {}'.format(flattened.shape))
+
+#output 
+#array([[0, 1, 2, 3],
+       #[4, 5, 6, 7]])
+#arr shape: (2, 4)
+#array([0, 1, 2, 3, 4, 5, 6, 7])
+#flattened shape: (8,)
+```
 
 
