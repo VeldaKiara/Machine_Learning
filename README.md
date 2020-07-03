@@ -331,6 +331,7 @@ np.array([np.nan, 1, 2], dtype=np.int32)
 e. Infinity<br>
 To represent infinity in NumPy, we use the np.inf special value. We can also represent negative infinity with -np.inf.<br>
 Example usage of np.inf. Note that np.inf cannot take on an integer type.<br>
+
 ```python
 print(np.inf > 1000000)
 
@@ -345,3 +346,4 @@ np.array([np.inf, 3], dtype=np.int32)
 
 #other output True, array([inf,  5.]), array([-inf,   1.])
 ```
+More illustrations of the above can be found [here](https://github.com/veldakarimi/Machine_Learning/blob/ca21216a2b73282fe7ac71e3f3c7a0bce738be2a/numpyarrays.py#L1-L14)
