@@ -346,4 +346,58 @@ np.array([np.inf, 3], dtype=np.int32)
 
 #other output True, array([inf,  5.]), array([-inf,   1.])
 ```
-More illustrations of the above can be found [here](https://github.com/veldakarimi/Machine_Learning/blob/ca21216a2b73282fe7ac71e3f3c7a0bce738be2a/numpyarrays.py#L1-L14)
+More illustrations of the above can be found [here](https://github.com/veldakarimi/Machine_Learning/blob/ca21216a2b73282fe7ac71e3f3c7a0bce738be2a/numpyarrays.py#L1-L14)<br>
+### Numpy Basics
+Perform basic operations to create and modify NumPy arrays.
+a. Ranged Data<br>
+np.array  is used to create an array which is equal to hardcoding.<br>
+NumPy provides an option to create ranged data arrays using np.arange. 
+The function acts very similar to the range function in Python, and will always return a 1-D array.
+Example:<br>
+```python
+arr = np.arange(5)
+print(repr(arr))
+
+arr = np.arange(5.1)
+print(repr(arr))
+
+arr = np.arange(-1, 4)
+print(repr(arr))
+
+arr = np.arange(-1.5, 4, 2)
+print(repr(arr))
+
+#output
+#array([0, 1, 2, 3, 4])
+#array([0., 1., 2., 3., 4., 5.])
+#array([-1,  0,  1,  2,  3])
+#array([-1.5,  0.5,  2.5])
+```
+The output of np.arange is specified as follows:<br>
+-If only a single number, n, is passed in as an argument, np.arange will return an array with all the integers in the range [0,n] Note: the lower end is inclusive while the upper end is exclusive.<br>
+-For two arguments, m and n, np.arange will return an array with all the integers in the range [m, n].<br>
+-For three arguments, m, n, and s, np.arange will return an array with the integers in the range [m, n] using a step size of s.<br>
+-Like np.array, np.arange performs upcasting. It also has the dtype keyword argument to manually cast the array.<br>
+To specify the number of elements in the returned array, rather than the step size, we can use the np.linspace function.<br>
+This function takes in a required first two arguments, for the start and end of the range, respectively.<br>
+The end of the range is inclusive for np.linspace, unless the keyword argument endpoint is set to False.<br>
+To specify the number of elements, we set the num keyword argument (its default value is 50).
+Example:<br>
+```python
+arr = np.linspace(5, 11, num=4)
+print(repr(arr))
+
+arr = np.linspace(5, 11, num=4, endpoint=False)
+print(repr(arr))
+
+arr = np.linspace(5, 11, num=4, dtype=np.int32)
+print(repr(arr))
+
+#output
+#array([ 5.,  7.,  9., 11.])
+#array([5. , 6.5, 8. , 9.5])
+#array([ 5,  7,  9, 11], dtype=int32)
+```
+
+
+
