@@ -474,7 +474,7 @@ print('transposed shape: {}'.format(transposed.shape))
 ```
 In this example, the old first dimension became the new third dimension, the old second dimension became the new first dimension, and the old third dimension became the new second dimension. The default value for axes is a dimension reversal (e.g. for 3-D data the default axes value is [2, 1, 0]).
 
-d.Zeros and ones
+d. Zeros and ones
 Sometimes, we need to create arrays filled solely with 0 or 1.e.g binary data, we may need to create dummy datasets of strictly one label. For creating these arrays, NumPy provides the functions np.zeros and np.ones. They both take in the same arguments, which includes just one required argument, the array shape.<br>
 The functions also allow for manual casting using the dtype keyword argument.<br>
 The code below shows example usages of np.zeros and np.ones.<br>
@@ -512,6 +512,60 @@ print(repr(np.ones_like(arr, dtype=np.int32)))
 #array([[1, 1],
        #[1, 1]], dtype=int32)
 ```
+### Math
+a. Arithmetic <br>
+One of the main purposes of NumPy is to perform multi-dimensional arithmetic.<br>
+Using NumPy arrays, we can apply arithmetic to each element with a single operation.<br>
+The code below shows multi-dimensional arithmetic with NumPy.<br>
+```python
+arr = np.array([[1, 2], [3, 4]])
+# Add 1 to element values
+print(repr(arr + 1))
+# Subtract element values by 1.2
+print(repr(arr - 1.2))
+# Double element values
+print(repr(arr * 2))
+# Halve element values
+print(repr(arr / 2))
+# Integer division (half)
+print(repr(arr // 2))
+# Square element values
+print(repr(arr**2))
+# Square root element values
+print(repr(arr**0.5))
+
+#output
+array([[2, 3],
+       [4, 5]])
+array([[-0.2,  0.8],
+       [ 1.8,  2.8]])
+array([[2, 4],
+       [6, 8]])
+array([[0.5, 1. ],
+       [1.5, 2. ]])
+array([[0, 1],
+       [1, 2]])
+array([[ 1,  4],
+       [ 9, 16]])
+array([[1.        , 1.41421356],
+       [1.73205081, 2.        ]])
+```
+Using NumPy arithmetic, we can easily modify large amounts of numeric data with only a few operations. e.g, we could convert a dataset of Fahrenheit temperatures to their equivalent Celsius form.<br>
+The code below converts Fahrenheit to Celsius in NumPy.<br>
+```python
+def f2c(temps):
+  return (5/9)*(temps-32)
+
+fahrenheits = np.array([32, -4, 14, -40])
+celsius = f2c(fahrenheits)
+print('Celsius: {}'.format(repr(celsius)))
+
+#output
+Celsius: array([  0., -20., -10., -40.])
+```
+NB:Performing arithmetic on NumPy arrays<b> does not change the original array<b>, and instead produces a new array that is the result of the arithmetic operation.
+
+
 
 
 
