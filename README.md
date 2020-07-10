@@ -512,6 +512,8 @@ print(repr(np.ones_like(arr, dtype=np.int32)))
 #array([[1, 1],
        #[1, 1]], dtype=int32)
 ```
+More examples on Numpy basics [here](https://github.com/veldakarimi/Machine_Learning/blob/6119cb356382d3e22c15eb1115d42f0f4cb6a5da/numpybasics.py#L1-L11)
+
 ### Math
 a. Arithmetic <br>
 One of the main purposes of NumPy is to perform multi-dimensional arithmetic.<br>
@@ -563,7 +565,7 @@ print('Celsius: {}'.format(repr(celsius)))
 #output
 Celsius: array([  0., -20., -10., -40.])
 ```
-NB:Performing arithmetic on NumPy arrays<b> does not change the original array<b>, and instead produces a new array that is the result of the arithmetic operation.
+NB:Performing arithmetic on NumPy arrays<b> does not change the original array</b>, and instead produces a new array that is the result of the arithmetic operation.
 
 
 
