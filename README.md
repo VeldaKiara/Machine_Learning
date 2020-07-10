@@ -435,5 +435,44 @@ print('flattened shape: {}'.format(flattened.shape))
 #array([0, 1, 2, 3, 4, 5, 6, 7])
 #flattened shape: (8,)
 ```
+c.Transposing<br>
+The general meaning of transposing is to change places or context.<br>
+Perharps we have data that's supposed to be in a particular format, but some new data we get is rearranged. We can transpose the data, using the np.transpose function, to convert it to the proper format.<br>
+The code below shows an example usage of the np.transpose function. The matrix rows become columns after the transpose.
+```python
+arr = np.arange(8)
+arr = np.reshape(arr, (4, 2))
+transposed = np.transpose(arr)
+print(repr(arr))
+print('arr shape: {}'.format(arr.shape))
+print(repr(transposed))
+print('transposed shape: {}'.format(transposed.shape))
+
+#output
+#array([[0, 1],
+       #[2, 3],
+       #[4, 5],
+       #[6, 7]])
+#arr shape: (4, 2)
+#array([[0, 2, 4, 6],
+       #[1, 3, 5, 7]])
+#transposed shape: (2, 4)
+```
+The function takes in a required first argument, which will be the array we want to transpose. It also has a single keyword argument called <b>axes</b>, which represents the new permutation of the dimensions.<br>
+The permutation <i>is a tuple/list of integers, with the same length as the number of dimensions in the array</i>. It tells us where to switch up the dimensions. For example, if the permutation had 3 at index 1, it means the old third dimension of the data becomes the new second dimension (since index 1 represents the second dimension).<br>
+The code below shows an example usage of the np.transpose function with the axes keyword argument. The shape property gives us the shape of an array.<br>
+```python
+arr = np.arange(24)
+arr = np.reshape(arr, (3, 4, 2))
+transposed = np.transpose(arr, axes=(1, 2, 0))
+print('arr shape: {}'.format(arr.shape))
+print('transposed shape: {}'.format(transposed.shape))
+
+#output
+#arr shape: (3, 4, 2)
+#transposed shape: (4, 2, 3)
+```
+In this example, the old first dimension became the new third dimension, the old second dimension became the new first dimension, and the old third dimension became the new second dimension. The default value for axes is a dimension reversal (e.g. for 3-D data the default axes value is [2, 1, 0]).
+
 
 
