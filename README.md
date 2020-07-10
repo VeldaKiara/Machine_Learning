@@ -435,7 +435,7 @@ print('flattened shape: {}'.format(flattened.shape))
 #array([0, 1, 2, 3, 4, 5, 6, 7])
 #flattened shape: (8,)
 ```
-c.Transposing<br>
+c. Transposing<br>
 The general meaning of transposing is to change places or context.<br>
 Perharps we have data that's supposed to be in a particular format, but some new data we get is rearranged. We can transpose the data, using the np.transpose function, to convert it to the proper format.<br>
 The code below shows an example usage of the np.transpose function. The matrix rows become columns after the transpose.
@@ -473,6 +473,47 @@ print('transposed shape: {}'.format(transposed.shape))
 #transposed shape: (4, 2, 3)
 ```
 In this example, the old first dimension became the new third dimension, the old second dimension became the new first dimension, and the old third dimension became the new second dimension. The default value for axes is a dimension reversal (e.g. for 3-D data the default axes value is [2, 1, 0]).
+
+d.Zeros and ones
+Sometimes, we need to create arrays filled solely with 0 or 1.e.g binary data, we may need to create dummy datasets of strictly one label. For creating these arrays, NumPy provides the functions np.zeros and np.ones. They both take in the same arguments, which includes just one required argument, the array shape.<br>
+The functions also allow for manual casting using the dtype keyword argument.<br>
+The code below shows example usages of np.zeros and np.ones.<br>
+```python
+arr = np.zeros(4)
+print(repr(arr))
+
+arr = np.ones((2, 3))
+print(repr(arr))
+
+arr = np.ones((2, 3), dtype=np.int32)
+print(repr(arr))
+
+#output
+#array([0., 0., 0., 0.])
+#array([[1., 1., 1.],
+       #[1., 1., 1.]])
+#array([[1, 1, 1],
+       #[1, 1, 1]], dtype=int32)
+```
+If we want to create an array of 0's or 1's with the same shape as another array, we can use np.zeros_like and np.ones_like.<br>
+The code below shows example usages of np.zeros_like and np.ones_like.<br>
+```python
+arr = np.array([[1, 2], [3, 4]])
+print(repr(np.zeros_like(arr)))
+
+arr = np.array([[0., 1.], [1.2, 4.]])
+print(repr(np.ones_like(arr)))
+print(repr(np.ones_like(arr, dtype=np.int32)))
+#output
+#array([[0, 0],
+       #[0, 0]])
+#array([[1., 1.],
+       #[1., 1.]])
+#array([[1, 1],
+       #[1, 1]], dtype=int32)
+```
+
+
 
 
 
