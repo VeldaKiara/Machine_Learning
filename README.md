@@ -639,6 +639,7 @@ array([[  4,   4],
        [-11, -10]])
 Traceback
 ```
+More illustrations on Math Numpy [here](https://github.com/veldakarimi/Machine_Learning/blob/debc22f21234830e610fbde1011088645ad973e0/numpymath.py#L1-L13)
 
 
 
