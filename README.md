@@ -614,6 +614,32 @@ array([[ 10.2,  16. ],
 ```
 NumPy has various other mathematical functions, which are listed [here](https://numpy.org/doc/stable/reference/routines.math.html)
 
+c. Matrix multiplication<br>
+NumPy arrays are basically vectors and matrices, it makes sense that there are functions for dot products and matrix multiplication.The main function to use is np.matmul, which takes two vector/matrix arrays as input and produces a dot product or matrix multiplication.<br>
+Nb: that the dimensions of the two input matrices must be valid for a matrix multiplication. Specifically, the second dimension of the first matrix must equal the first dimension of the second matrix, otherwise np.matmul will result in a ValueError.<br>
+The code below shows various examples of matrix multiplication. When both inputs are 1-D, the output is the dot product.
+```python
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([-3, 0, 10])
+print(np.matmul(arr1, arr2))
+
+arr3 = np.array([[1, 2], [3, 4], [5, 6]])
+arr4 = np.array([[-1, 0, 1], [3, 2, -4]])
+print(repr(np.matmul(arr3, arr4)))
+print(repr(np.matmul(arr4, arr3)))
+# This will result in ValueError
+print(repr(np.matmul(arr3, arr3)))
+
+#output
+27
+array([[  5,   4,  -7],
+       [  9,   8, -13],
+       [ 13,  12, -19]])
+array([[  4,   4],
+       [-11, -10]])
+Traceback
+```
+
 
 
 
