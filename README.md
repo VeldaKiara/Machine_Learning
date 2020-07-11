@@ -567,6 +567,53 @@ Celsius: array([  0., -20., -10., -40.])
 ```
 NB:Performing arithmetic on NumPy arrays<b> does not change the original array</b>, and instead produces a new array that is the result of the arithmetic operation.
 
+b. Non-linear functions<br>
+NumPy also allows you to use non-linear functions such as exponentials and logarithms.<br>
+The function np.exp performs a base e exponential on an array, while the function np.exp2 performs a base 2 exponential. 
+Likewise, np.log, np.log2, and np.log10 all perform logarithms on an input array, using base e, base 2, and base 10, respectively.<br>
+The code below shows various exponentials and logarithms with NumPy. Note that np.e and np.pi represent the mathematical constants e and π, respectively.<br>
+```python
+arr = np.array([[1, 2], [3, 4]])
+# Raised to power of e
+print(repr(np.exp(arr)))
+# Raised to power of 2
+print(repr(np.exp2(arr)))
+
+arr2 = np.array([[1, 10], [np.e, np.pi]])
+# Natural logarithm
+print(repr(np.log(arr2)))
+# Base 10 logarithm
+print(repr(np.log10(arr2)))
+
+#output
+array([[ 2.71828183,  7.3890561 ],
+       [20.08553692, 54.59815003]])
+array([[ 2.,  4.],
+       [ 8., 16.]])
+array([[0.        , 2.30258509],
+       [1.        , 1.14472989]])
+array([[0.        , 1.        ],
+       [0.43429448, 0.49714987]])
+```
+To use a regular power operation with any base, we use np.power. The first argument to the function is the base, while the second is the power. <br>
+If the base or power is an array rather than a single number, the operation is applied to every element in the array.<br>
+Example of using np.power:<br>
+```python
+arr = np.array([[1, 2], [3, 4]])
+# Raise 3 to power of each number in arr
+print(repr(np.power(3, arr)))
+arr2 = np.array([[10.2, 4], [3, 5]])
+# Raise arr2 to power of each number in arr
+print(repr(np.power(arr2, arr)))
+
+#output
+array([[ 3,  9],
+       [27, 81]])
+array([[ 10.2,  16. ],
+       [ 27. , 625. ]])
+```
+NumPy has various other mathematical functions, which are listed [here](https://numpy.org/doc/stable/reference/routines.math.html)
+
 
 
 
