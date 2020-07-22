@@ -779,7 +779,19 @@ array([[ 5.44064605,  2.92177381],
 ```
 Like np.random.uniform, np.random.normal has no required arguments.<br>
 The loc and scale keyword arguments represent the mean and standard deviation, respectively, of the normal distribution we sample from.<br>
-Other built in [distributions](https://docs.scipy.org/doc/numpy-1.14.1/reference/routines.random.html)
+Other built in [distributions](https://docs.scipy.org/doc/numpy-1.14.1/reference/routines.random.html)<br>
+
+d. Custom Sampling <br>
+While NumPy provides built-in distributions to sample from, we can also sample from a custom distribution with the np.random.choice function.<br>
+```python
+colors = ['red', 'blue', 'green']
+print(np.random.choice(colors))
+print(repr(np.random.choice(colors, size=2)))
+print(repr(np.random.choice(colors, size=(2, 2),
+                            p=[0.8, 0.19, 0.01])))
+```
+
+
 
 
 
