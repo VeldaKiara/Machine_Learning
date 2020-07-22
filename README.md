@@ -674,6 +674,74 @@ If high is not None, then the required argument will represent the lower (inclus
 The size keyword argument specifies the size of the output array, where each integer in the array is randomly drawn from the specified range. <br>
 As a default, np.random.randint returns a single integer.<br>
 
+b. Utility Functions<br>
+Fundamental utility functions from the np.random module are np.random.seed and np.random.shuffle.<br>
+We use the np.random.seed function to set the random seed, which allows us to control the outputs of the pseudo-random functions. <br>
+The function takes in a single integer as an argument, representing the random seed.<br>
+Random seed specifies the start point when a computer generates a random number sequence.<br>
+Example using np.random.seed with the same random seed. <br>
+Note how the outputs of the random functions in each subsequent run are identical when we set the same random seed.<br>
+```python
+np.random.seed(1)
+print(np.random.randint(10))
+random_arr = np.random.randint(3, high=100,
+                               size=(2, 2))
+print(repr(random_arr))
+
+# New seed
+np.random.seed(2)
+print(np.random.randint(10))
+random_arr = np.random.randint(3, high=100,
+                               size=(2, 2))
+print(repr(random_arr))
+
+# Original seed
+np.random.seed(1)
+print(np.random.randint(10))
+random_arr = np.random.randint(3, high=100,
+                               size=(2, 2))
+print(repr(random_arr))
+
+'''
+output
+5
+array([[15, 75],
+       [12, 78]])
+8
+array([[18, 75],
+       [25, 46]])
+5
+array([[15, 75],
+       [12, 78]])
+'''
+```
+np.random.shuffle function allows us to randomly shuffle an array. <br>
+Note that the shuffling happens in place (i.e. no return value), and shuffling multi-dimensional arrays only shuffles the first dimension.<br>
+Example of np.random.shuffle. Note that only the rows of matrix are shuffled (i.e. shuffling along first dimension only).<br>
+```python
+vec = np.array([1, 2, 3, 4, 5])
+np.random.shuffle(vec)
+print(repr(vec))
+np.random.shuffle(vec)
+print(repr(vec))
+
+matrix = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+np.random.shuffle(matrix)
+print(repr(matrix))
+
+'''
+output
+array([5, 4, 3, 2, 1])
+array([2, 5, 4, 3, 1])
+array([[4, 5, 6],
+       [7, 8, 9],
+       [1, 2, 3]])
+'''
+```
+
+
 
 
 
