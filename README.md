@@ -740,6 +740,46 @@ array([[4, 5, 6],
        [1, 2, 3]])
 '''
 ```
+C. Distributions <br>
+Using np.random we can  draw samples from probability distributions.e.g, we can use np.random.uniform to draw pseudo-random real numbers from a uniform distribution.<br>
+Example of np.random.uniform. <br>
+```python 
+print(np.random.uniform())
+print(np.random.uniform(low=-1.5, high=2.2))
+print(repr(np.random.uniform(size=3)))
+print(repr(np.random.uniform(low=-3.4, high=5.9,
+                             size=(2, 2))))
+
+'''output
+0.0012899920879422266
+0.16014194484284805
+array([0.42698393, 0.13810429, 0.0028385 ])
+array([[-0.66067351,  5.27294206],
+       [ 3.81933726, -2.22900708]])
+'''
+```
+The function np.random.uniform actually has no required arguments. The keyword arguments, low and high, represent the inclusive lower end and exclusive upper end from which to draw random samples. Since they have default values of 0.0 and 1.0, respectively, the default outputs of np.random.uniform come from the range [0.0, 1.0). <br>
+
+The size keyword argument  represents the output size of the array.<br>
+Another distribution we can sample from is the normal (Gaussian) distribution. The function we use is np.random.normal.<br>
+Example of np.random.normal:<br>
+```python
+print(np.random.normal())
+print(np.random.normal(loc=1.5, scale=3.5))
+print(repr(np.random.normal(loc=-2.4, scale=4.0,
+                            size=(2, 2))))
+                            
+'''
+output
+0.6084710983104439
+3.2985332151781908
+array([[ 5.44064605,  2.92177381],
+       [-6.99030241, -7.32588644]])
+'''
+```
+Like np.random.uniform, np.random.normal has no required arguments.<br>
+The loc and scale keyword arguments represent the mean and standard deviation, respectively, of the normal distribution we sample from.<br>
+Other built in [distributions](https://docs.scipy.org/doc/numpy-1.14.1/reference/routines.random.html)
 
 
 
