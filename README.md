@@ -640,6 +640,41 @@ array([[  4,   4],
 Traceback
 ```
 More illustrations on Math Numpy [here](https://github.com/veldakarimi/Machine_Learning/blob/debc22f21234830e610fbde1011088645ad973e0/numpymath.py#L1-L13)
+<br>
+
+### Random
+Generate numbers and arrays from different random distributions.<br>
+a. Random Integers <br>
+Similar to Python's random module, NumPy has its own submodule for pseudo-random number generation called np.random.<br>
+It provides all the necessary randomized operations and extends it to multi-dimensional arrays.<br>
+To generate pseudo-random integers, we use the np.random.randint function.<br>
+Example of np.random.randint:<br>
+``` python
+print(np.random.randint(5))
+print(np.random.randint(5))
+print(np.random.randint(5, high=6))
+
+random_arr = np.random.randint(-3, high=14,
+                               size=(2, 2))
+print(repr(random_arr))
+
+'''
+output
+4
+2
+5
+array([[ 4,  2],
+       [ 2, 12]])
+'''
+```
+The np.random.randint function takes in a single argument, which depends on the high keyword argument.<br>
+If high=None (default value), then the required argument represents the upper (exclusive) end of the range, with the lower end being 0. Specifically, if the required argument is n, then the random integer is chosen uniformly from the range [0, n).<br>
+
+If high is not None, then the required argument will represent the lower (inclusive) end of the range, while high represents the upper (exclusive) end.<br>
+The size keyword argument specifies the size of the output array, where each integer in the array is randomly drawn from the specified range. <br>
+As a default, np.random.randint returns a single integer.<br>
+
+
 
 
 
