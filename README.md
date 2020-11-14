@@ -789,7 +789,124 @@ print(np.random.choice(colors))
 print(repr(np.random.choice(colors, size=2)))
 print(repr(np.random.choice(colors, size=(2, 2),
                             p=[0.8, 0.19, 0.01])))
+
+''' output
+blue
+array(['blue', 'green'], dtype='<U5')
+array([['blue', 'red'],
+       ['red', 'red']], dtype='<U5')
+'''       
 ```
+
+### Indexing 
+Index into NumPy arrays to extract data and array slices.<br>
+a. Array Accessing<br>
+Accessing NumPy arrays is identical to accessing Python lists. For multi-dimensional arrays, it is equivalent to accessing Python lists of lists.<br>
+Example:<br>
+```python
+arr = np.array([1, 2, 3, 4, 5])
+print(arr[0])
+print(arr[4])
+
+arr = np.array([[6, 3], [0, 2]])
+# Subarray
+print(repr(arr[0]))
+
+'''output 
+1
+5
+array([6, 3])
+'''
+```
+
+b. Slicing<br>
+NumPy arrays also support slicing.<br> Similar to Python, we use the colon operator (i.e. arr[:]) for slicing.<br>
+We  also use negative indexing to slice in the backwards direction.
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+print(repr(arr[:]))
+print(repr(arr[1:]))
+print(repr(arr[2:4]))
+print(repr(arr[:-1]))
+print(repr(arr[-2:]))
+
+''' output
+array([1, 2, 3, 4, 5])
+array([2, 3, 4, 5])
+array([3, 4])
+array([1, 2, 3, 4])
+array([4, 5])
+```
+For multi-dimensional arrays, we can use a comma to separate slices across each dimension.<br>
+Example slices of a 2-D NumPy array:<br>
+``` python
+arr = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+print(repr(arr[:]))
+print(repr(arr[1:]))
+print(repr(arr[:, -1]))
+print(repr(arr[:, 1:]))
+print(repr(arr[0:1, 1:]))
+print(repr(arr[0, 1:]))
+
+'''
+output
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+array([[4, 5, 6],
+       [7, 8, 9]])
+array([3, 6, 9])
+array([[2, 3],
+       [5, 6],
+       [8, 9]])
+array([[2, 3]])
+array([2, 3])
+
+'''
+```
+
+c. Argmin and argmax<br>
+It is useful to figure out the actual indexes of the minimum and maximum elements. To do this, we use the np.argmin and np.argmax functions.
+Example usages of np.argmin and np.argmax. Note that the index of element -6 is index 5 in the flattened version of arr:<br>
+``` python
+arr = np.array([[-2, -1, -3],
+                [4, 5, -6],
+                [-3, 9, 1]])
+print(np.argmin(arr[0]))
+print(np.argmax(arr[2]))
+print(np.argmin(arr))
+''' output
+2
+1
+5
+'''
+```
+The np.argmin and np.argmax functions take the same arguments. The required argument is the input array and the axis keyword argument specifies which dimension to apply the operation on.<br>
+Example of axis keyword argument is used for these functions:<br>
+```python
+arr = np.array([[-2, -1, -3],
+                [4, 5, -6],
+                [-3, 9, 1]])
+print(repr(np.argmin(arr, axis=0)))
+print(repr(np.argmin(arr, axis=1)))
+print(repr(np.argmax(arr, axis=-1)))
+
+'''output
+array([2, 0, 1])
+array([2, 2, 0])
+array([1, 1, 1])
+'''
+```
+
+
+
+
+
+
+
 
 
 
