@@ -12,3 +12,4 @@ logged = np.log(arr2)
 matmul1 = np.matmul(logged,exponential)
 matmul2 = np.matmul(exponential, logged)
 
+
