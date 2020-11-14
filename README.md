@@ -1518,7 +1518,8 @@ array([2, 3])
 ```
 
 c. Argmin and argmax<br>
-It is useful to figure out the actual indexes of the minimum and maximum elements. To do this, we use the np.argmin and np.argmax functions.
+It is useful to figure out the actual indexes of the minimum and maximum elements.<br>
+To do this, we use the np.argmin and np.argmax functions.<br>
 Example usages of np.argmin and np.argmax. Note that the index of element -6 is index 5 in the flattened version of arr:<br>
 ``` python
 arr = np.array([[-2, -1, -3],
@@ -1549,7 +1550,7 @@ array([2, 2, 0])
 array([1, 1, 1])
 '''
 ```
-(Indexing example)[https://github.com/veldakarimi/Machine_Learning/blob/master/indexing.py#L1-L51]
+[Indexing example](https://github.com/veldakarimi/Machine_Learning/blob/master/indexing.py#L1-L51)
 
 
 
