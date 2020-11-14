@@ -1549,7 +1549,7 @@ array([2, 2, 0])
 array([1, 1, 1])
 '''
 ```
-
+(Indexing example)[https://github.com/veldakarimi/Machine_Learning/blob/master/indexing.py#L1-L51]
 
 
 
